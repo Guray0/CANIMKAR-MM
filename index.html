@@ -325,28 +325,24 @@ document.getElementById("startDateText").textContent = formattedDate;
 
 // Gün sayacı
 const dayCounter = document.getElementById('dayCounter');
-const startDate = new Date("2026-01-01T00:00:00");
-const today = new Date();
 
-// İki tarih arasındaki gün farkını net hesapla
-const diffTime = Math.abs(today - startDate);
-const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+function updateDayCounter() {
+  const startDateForCounter = new Date(2026, 0, 1);
 
-// Ekrana direkt yazdır
-dayCounter.textContent = diffDays.toLocaleString('tr-TR');
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
+  const oneDay = 1000 * 60 * 60 * 24;
+  const diffDays = Math.floor((today - startDateForCounter) / oneDay) + 1;
 
-let count = 0;
-const increment = Math.ceil(diffDays / 100);
-const interval = setInterval(() => {
-  if (count >= diffDays) {
-    clearInterval(interval);
-    dayCounter.textContent = diffDays.toLocaleString('tr-TR');
-  } else {
-    count += increment;
-    dayCounter.textContent = Math.min(count, diffDays).toLocaleString('tr-TR');
-  }
-}, 20);
+  const totalDays = Math.max(diffDays, 0);
+
+  dayCounter.textContent = totalDays.toLocaleString('tr-TR');
+}
+
+updateDayCounter();
+
+setInterval(updateDayCounter, 60 * 1000);
 
 // Özel notları oluştur
 const notesContainer = document.getElementById('specialNotesContainer');
