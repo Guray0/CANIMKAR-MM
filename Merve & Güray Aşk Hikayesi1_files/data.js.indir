@@ -2,5 +2,8 @@ const coupleData = {
   maleName: "Güray",
   femaleName: "Merve",
   startDate: "2026-01-01",
-  specialNote: "İyi ki doğdun prensesim. Hayatımda senin gibi birini tanımış olmak bile çok güzelken, ilk doğum gününü birlikte kutluyor olmak benim için apayrı bir mutluluk. Daha nice doğum günlerinde yanında olmak, her senende sana sarılabilmek istiyorum."
+  specialNote: "İyi ki doğdun prensesim. Hayatımda senin gibi birini tanımış olmak bile çok güzelken, ilk doğum gününü birlikte kutluyor olmak benim için apayrı bir mutluluk. Daha nice doğum günlerinde yanında olmak, her senende sana sarılabilmek istiyorum.
+İyi ki doğdun aşkım ❤️
+Seninle geçirdiğim her an benim için çok özel. Hayatıma kattığın mutluluk, huzur ve güzel hisler için sana ne kadar teşekkür etsem az. Bu, birlikte kutladığımız ilk doğum günün ve inanıyorum ki daha beraber kutlayacağımız çok güzel yaşlarımız olacak.
+Bugün yüzün hep gülsün, tüm dileklerin gerçek olsun. İyi ki varsın, iyi ki benimlesin 🎂✨"
 };
