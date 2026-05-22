@@ -1,0 +1,6 @@
+const coupleData = {
+  maleName: "Güray",
+  femaleName: "Merve",
+  startDate: "2026-01-01",
+  specialNote: "İyi ki doğdun prensesim. Hayatımda senin gibi birini tanımış olmak bile çok güzelken, ilk doğum gününü birlikte kutluyor olmak benim için apayrı bir mutluluk. Daha nice doğum günlerinde yanında olmak, her senende sana sarılabilmek istiyorum."
+};
