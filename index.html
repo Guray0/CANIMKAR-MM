@@ -332,7 +332,6 @@ const cleanStart = new Date(counterStartDate.getFullYear(), counterStartDate.get
 
 const diffDays = Math.max(Math.floor((cleanToday - cleanStart) / 86400000) + 1, 0);
 dayCounter.textContent = diffDays.toLocaleString('tr-TR');
-}
 
 updateDayCounter();
 setInterval(updateDayCounter, 60 * 1000);
