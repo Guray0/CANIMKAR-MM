@@ -323,15 +323,15 @@ const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = startDate.toLocaleDateString('tr-TR', dateOptions);
 document.getElementById("startDateText").textContent = formattedDate;
 // Gün sayacı
-// Gün sayacı
 const dayCounter = document.getElementById('dayCounter');
-const targetToday = new Date();
-const counterStartDate = new Date(2026, 0, 1);
+const bugun = new Date();
+const baslangic = new Date(2026, 0, 1); // 1 Ocak 2026
 
-const cleanToday = new Date(targetToday.getFullYear(), targetToday.getMonth(), targetToday.getDate());
-const cleanStart = new Date(counterStartDate.getFullYear(), counterStartDate.getMonth(), counterStartDate.getDate());
+const cleanToday = new Date(bugun.getFullYear(), bugun.getMonth(), bugun.getDate());
+const cleanStart = new Date(baslangic.getFullYear(), baslangic.getMonth(), baslangic.getDate());
 
-const diffDays = Math.max(Math.floor((cleanToday - cleanStart) / 86400000) + 1, 0);
+const diffTime = Math.abs(cleanToday - cleanStart);
+const diffDays = Math.floor(diffTime / 86400000) + 1; 
 dayCounter.textContent = diffDays.toLocaleString('tr-TR');
 
 const noteTitles = [
