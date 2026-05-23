@@ -303,10 +303,10 @@
 
 <script>
 // Verileri data.js'den al
-const maleName = coupleData.maleName;
-const femaleName = coupleData.femaleName;
-const startDate = new Date("2026-01-01");
-const specialNotes = coupleData.specialNote.split('\n\n').filter(note => note.trim());
+const maleName = "Güray";
+const femaleName = "Merve";
+const startDate = new Date(2026, 0, 1);
+const specialNotes = [];
 
 // Sayfa başlığını ayarla
 const pageTitle = `${femaleName} & ${maleName} Aşk Hikayesi`;
@@ -335,18 +335,11 @@ function updateDayCounter() {
   const oneDay = 1000 * 60 * 60 * 24;
   const diffDays = Math.floor((today - startDateForCounter) / oneDay) + 1;
 
-  const totalDays = Math.max(diffDays, 0);
-
-  dayCounter.textContent = totalDays.toLocaleString('tr-TR');
+  dayCounter.textContent = Math.max(diffDays, 0).toLocaleString('tr-TR');
 }
 
 updateDayCounter();
-
 setInterval(updateDayCounter, 60 * 1000);
-
-// Özel notları oluştur
-const notesContainer = document.getElementById('specialNotesContainer');
-const noteColors = [
   'from-pink-400 to-purple-400',
   'from-purple-400 to-pink-400',
   'from-pink-500 to-purple-500'
