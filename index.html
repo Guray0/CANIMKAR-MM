@@ -333,8 +333,6 @@ const cleanStart = new Date(counterStartDate.getFullYear(), counterStartDate.get
 const diffDays = Math.max(Math.floor((cleanToday - cleanStart) / 86400000) + 1, 0);
 dayCounter.textContent = diffDays.toLocaleString('tr-TR');
 
-updateDayCounter();
-setInterval(updateDayCounter, 60 * 1000);
   'from-pink-400 to-purple-400',
   'from-purple-400 to-pink-400',
   'from-pink-500 to-purple-500'
