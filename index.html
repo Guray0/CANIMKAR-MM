@@ -322,20 +322,13 @@ document.getElementById("femaleName").textContent = femaleName;
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 const formattedDate = startDate.toLocaleDateString('tr-TR', dateOptions);
 document.getElementById("startDateText").textContent = formattedDate;
-
 // Gün sayacı
 const dayCounter = document.getElementById('dayCounter');
-
-function updateDayCounter() {
-  const startDateForCounter = new Date(2026, 0, 1);
-
-  const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-  const oneDay = 1000 * 60 * 60 * 24;
-  const diffDays = Math.floor((today - startDateForCounter) / oneDay) + 1;
-
-  dayCounter.textContent = Math.max(diffDays, 0).toLocaleString('tr-TR');
+const today = new Date();
+const counterStartDate = new Date(2026, 0, 1);
+const cleanToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+const diffDays = Math.max(Math.floor((cleanToday - counterStartDate) / 86400000) + 1, 0);
+dayCounter.textContent = diffDays.toLocaleString('tr-TR');
 }
 
 updateDayCounter();
